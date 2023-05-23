@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, HttpResponse
+from django.http import JsonResponse
 
 # Create your views here.
 def root(request):
@@ -15,3 +16,12 @@ def create(request):
 
 def show(request, num):
     return HttpResponse(f'placeholder to display blog number: {num}')
+
+def edit(request, num):
+    return HttpResponse(f'placeholder to edit blog number: {num}')
+
+def destroy(request, num):
+    return redirect('/')
+
+def json(request):
+    return JsonResponse({'title': 'JSON RESPONSE', 'content': 'success'})
