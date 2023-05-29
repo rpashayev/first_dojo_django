@@ -17,6 +17,6 @@ Including another URLconf
 from django.urls import path, include
 
 urlpatterns = [
-    path('', include('app_one.urls'))
+    path('', include('blogs_app.urls'))
     # path('admin/', admin.site.urls),
 ]
